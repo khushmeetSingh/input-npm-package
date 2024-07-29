@@ -28,7 +28,6 @@ export type FormattedInputProps = {
   pattern?: string;
   placeholderText: string;
   formatTemplate: string;
-  formatTemplateTemp: string;
   CustomInput?: React.ComponentType<
     React.InputHTMLAttributes<HTMLInputElement>
   >;
@@ -54,7 +53,6 @@ const FormattedInput = ({
   pattern,
   placeholderText,
   formatTemplate,
-  formatTemplateTemp,
   CustomInput,
 }: FormattedInputProps) => {
   return CustomInput ? (

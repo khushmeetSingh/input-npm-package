@@ -1,8 +1,5 @@
 {
-  "name": "@khushmeetsingh/react_formatted_input",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/khushmeetsingh"
-  },
+  "name": "react-input-formatter",
   "version": "1.0.0",
   "description": "A simple template for a custom React component imput formatter",
   "scripts": {
