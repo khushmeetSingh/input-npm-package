@@ -1,7 +1,6 @@
 # react-input-formatter
 
 [![npm version](https://badge.fury.io/js/react-input-formatter.svg)](https://badge.fury.io/js/react-input-formatter)
-[![Build Status](https://travis-ci.com/yourusername/react-input-formatter.svg?branch=main)](https://travis-ci.com/yourusername/react-input-formatter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
@@ -45,3 +44,28 @@ export default ComponentName;
 ```
 
 This code will allow the inputs of the following format: A1B2C3 and will make it A1B-2C3.
+
+## Props
+
+- `formatTemplate`: This is the masked version of the input that we want the user to input.
+    - `#` can be used to mask a character input. This includes all the alphanumeric characters.
+    - `9` can be used to mask a character input containing a number.
+    - `@` can be used to mask a character input of special character.
+    #### Examples:
+    `###-####` will allow an input of A1B-2C3D
+    
+    `(999)999-999` will allow an input of (123)456-7890
+
+## Contributing
+Contributions are welcome! Please read the contributing guidelines first.
+
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature-branch).
+3. Commit your changes (git commit -am 'Add new feature').
+4. Push to the branch (git push origin feature-branch).
+5. Create a new Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/khushmeetSingh/input-npm-package/blob/master/LICENCE) file for details.
+

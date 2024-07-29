@@ -1,6 +1,6 @@
 {
   "name": "react-input-formatter",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "A simple template for a custom React component imput formatter",
   "scripts": {
     "rollup": "rollup -c"
@@ -25,5 +25,6 @@
   "types": "dist/index.d.ts",
   "dependencies": {
     "tslib": "^2.6.3"
-  }
+  },
+  "keywords":["formatter", "input-formatter", "format-input", "postal-code", "format", "input"]
 }
