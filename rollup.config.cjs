@@ -14,12 +14,12 @@ module.exports = [
       {
         file: packageJson.main,      // dist/cjs/index.js
         format: "cjs",
-        sourcemap: true,
+        sourcemap: false,
       },
       {
         file: packageJson.module,    // dist/esm/index.js
         format: "esm",
-        sourcemap: true,
+        sourcemap: false,
       },
     ],
     plugins: [
