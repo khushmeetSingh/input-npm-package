@@ -3,6 +3,26 @@
 [![npm version](https://badge.fury.io/js/react-input-formatter.svg)](https://badge.fury.io/js/react-input-formatter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## ⚠️ Important: Client Component Requirement
+
+`react-input-formatter` uses browser-only DOM APIs such as `selectionStart` and
+`setSelectionRange` to apply live formatting and caret positioning. These APIs
+do **not** exist during server-side rendering.
+
+If you are using **Next.js (App Router)**, you **must** use this component inside
+a **Client Component**.
+
+Add `"use client"` at the top of the file where you use the component:
+
+```tsx
+"use client";
+
+import FormattedInput from "react-input-formatter";
+
+export default function MyForm() {
+  return <FormattedInput {...props} />;
+}
+
 ## Table of Contents
 
 - [About](#about)
