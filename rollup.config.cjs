@@ -1,11 +1,12 @@
-import resolve from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
-import typescript from "@rollup/plugin-typescript";
-import dts from "rollup-plugin-dts";
+const json = require("@rollup/plugin-json");
+const resolve = require("@rollup/plugin-node-resolve").default;
+const commonjs = require("@rollup/plugin-commonjs");
+const typescript = require("@rollup/plugin-typescript");
+const dts = require("rollup-plugin-dts").default;
 
-import packageJson from "./package.json" assert { type: "json" };
+const packageJson = require("./package.json");
 
-export default [
+module.exports = [
   {
     input: "src/index.ts",
     output: [
@@ -18,9 +19,10 @@ export default [
         file: packageJson.module,
         format: "esm",
         sourcemap: true,
-      },
+      }
     ],
     plugins: [
+      json(), 
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
@@ -29,8 +31,10 @@ export default [
   },
   {
     input: "dist/esm/index.d.ts",
-    output: [{ file: "dist/index.d.ts", format: "esm" }],
+    output: [
+      { file: "dist/index.d.ts", format: "esm" }
+    ],
     plugins: [dts()],
     external: ["react", "react-dom"],
-  },
+  }
 ];
