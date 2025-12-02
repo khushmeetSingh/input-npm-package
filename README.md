@@ -22,6 +22,7 @@ import FormattedInput from "react-input-formatter";
 export default function MyForm() {
   return <FormattedInput {...props} />;
 }
+```
 
 ## Table of Contents
 
